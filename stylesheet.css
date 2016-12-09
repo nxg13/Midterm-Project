@@ -1,0 +1,25 @@
+img [src="question1.png"] {
+    width: 80%;
+    margin-left: 10%;
+}
+
+#questionText {
+    padding-top: 10px;
+}
+
+#picture {
+    width: 100%;
+}
+
+body {
+    background: linear-gradient(to bottom, #F05F4E, white, #3A97FC);
+    
+}
+
+#title {
+    text-align: center;
+}
+
+#questionIndicator {
+    font-size: 16px;
+}

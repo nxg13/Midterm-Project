@@ -207,7 +207,8 @@ var buttonClicked = function() {
     displayAnswers();
     displayQuestionNumber();
     
-    if (questionCounter >= questionArray.length) {
+//MAKE TEST EASIER TO TRY OUT BY MAKING >= # SMALLER !!!!!!!!!!!  
+    if (questionCounter >= 5) {
         //end the test here
         //display the score report, send scores to data base, etc.
         collectData();

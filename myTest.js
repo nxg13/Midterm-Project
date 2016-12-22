@@ -132,7 +132,6 @@ var answerArray = [
 ];
 
 
-
 var correctAnswers = ["3", "0", "2", "1", "4",
                       "2", "3", "4", "0", "3",
                       "1", "2", "3", "4", "0",
@@ -251,6 +250,7 @@ var buttonClicked = function() {
                 //question is correct
                 outputValue = 1;
             }
+            console.log(outputValue);
             var outputKey = "question" + i;
             outputObject[outputKey] = outputValue;
         }
@@ -264,8 +264,8 @@ var buttonClicked = function() {
         var updates = {};
         updates['/responses/' + newPostKey] = opobj;
         firebase.database().ref().update(updates);
-
-    }
+        
+}
     
 
      

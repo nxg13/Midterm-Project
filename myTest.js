@@ -195,7 +195,7 @@ var buttonClicked = function() {
             var choiceName = "choice" + (i+1);
             var selection = document.getElementById(choiceName).innerHTML;
             selectedAnswers.push(selection);
-            if (selection == correctAnswers[questionCounter]) {
+            if (answerArray[questionCounter].indexOf(selection) == correctAnswers[questionCounter]) {
                 correctCounter++;
                 //do other stuff if correct
             }

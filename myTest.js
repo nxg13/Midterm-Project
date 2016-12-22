@@ -132,6 +132,7 @@ var answerArray = [
 ];
 
 
+
 var correctAnswers = ["The requirement that presidential appointments to the Supreme Court be approved by the Senate", "People with higher incomes are more likely to think of themselves as conservative than those with lower incomes.", "a closed primary", "adds balance and appeal to the national ticket", "raise campaign funds to support favored candidates", "The share of income received by the highest fifth increased, whereas the share received by the lowest fifth decreased.", "III and IV only", "reconcile differences in bills passed by the House and Senate", "justices are free from direct political pressures", "the House is so large that more work can be accomplished in committees than on the floor", "its appellate jurisdiction", "denying campaign reelection funds to legislators who oppose the President's policy stand", "using the appointment process to select judges with judicial philosophies similar to those of the President", "The Supreme Court decision declaring state-mandated school segregation to be unconstitutional", "It protects the right to express opinions even without the actual use of words.", "indicated that a strong, constitutionally designed national government was needed to protect property and maintain order", "divided between the central government and regional governments", "African American Democrats tend to support the more liberal candidates within their party", "A federal judge in whose court a case important to the corporation is being heard", "Increasing importance of presidential primaries rather than state conventions", "permanent subject-matter committees", "forming new cabinet-level departments", "Budget and Impoundment Control Act", "House seats are safer from election turnover than are Senate seats.", "Try to amend the Constitution.", "The legislative process is frequently lengthy, decentralized, and characterized by compromise and bargaining.", "The President must bring troops home from hostilities within 60 to 90 days unless Congress extends the time.", "minorities and women", "Civil Rights Act of 1964", "Fourteenth Amendment", "States cannot interfere with or tax the legitimate activities of the federal government.", "political values are passed to the next generation", "Partisan identification", "I and II only", "The House operates more by formal rules, while the Senate operates more on informal understandings.", "The House votes for impeachment, and the Senate conducts a trial and reaches a guilty verdict.", "linking citizens to the political process", "The Supreme Court is free to choose the case it hears with only a few limitations.", "the state legislatures", "I only", "federalism", "legislation granting the President the power to impound funds appropriated by Congress", "authorization of spending", "invalidate state abortion statutes", "unfair police interrogation", "not specifically granted to the national government or denied to the states", "when groups of voters have changed their traditional patterns of party loyalties", "Turned out at a lower rate than the rest of the electorate.", "day-to-day campaign activities", "The Democratic candidate will receive all 11 electoral votes.", "The percentage of voters identifying themselves as either Democrats or Republicans has been declining since the 1970's.", "regulate interstate commerce", "Standing committees oversee the bureaucracy's implementation of legislation.","Separation of powers", "Executive department, Congressional committee, interest group", "a plurality election", "presidential goals often conflict with the institutional goals of individual cabinet-level agencies", "ability to set specific guidelines after receiving a general mandate from Congress", "Prohibits the setting up of a state church.", "right of privacy", 
 
 ]
@@ -203,16 +204,18 @@ var buttonClicked = function() {
     //next question please
     questionCounter++;
     
-    displayQuestion();
-    displayAnswers();
-    displayQuestionNumber();
-    
-//MAKE TEST EASIER TO TRY OUT BY MAKING >= # SMALLER !!!!!!!!!!!  
+    //MAKE TEST EASIER TO TRY OUT BY MAKING >= # SMALLER (full test is questionArray.length) !!!!!!!!!!!  
     if (questionCounter >= 5) {
         //end the test here
         //display the score report, send scores to data base, etc.
         collectData();
     }
+    
+    displayQuestion();
+    displayAnswers();
+    displayQuestionNumber();
+    
+
     
         var pictureQuestions = [1,5,6,23,33,39];
     if (pictureQuestions.indexOf(questionCounter) >=0) {
@@ -227,7 +230,6 @@ var buttonClicked = function() {
 }
 
 
-
     var collectData = function() {
         //loop through selected answer
         //determine if each is correct
@@ -235,7 +237,7 @@ var buttonClicked = function() {
         var outputObject = {};
         for (var i =0; i< selectedAnswers.length; i++) {
             var outputValue = 0;
-            if (answerArray[i].indexOf(selectedAnswers[i]) == correctAnswers[i]) {
+            if (selectedAnswers[i] == correctAnswers[i]) {
                 //question is correct
                 outputValue = 1;
             }

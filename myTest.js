@@ -198,7 +198,6 @@ var buttonClicked = function() {
                 correctCounter++;
                 //do other stuff if correct
             }
-            break;
         }
     }
     

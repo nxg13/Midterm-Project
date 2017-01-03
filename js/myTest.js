@@ -256,16 +256,20 @@ var buttonClicked = function() {
         sendData(outputObject);
     }
 
-         var sendData = function(opobj) {
+    var sendData = function(opobj) {
         // Get a key for a new Post.
         var newPostKey = firebase.database().ref().child('responses').push().key;
         // Write the new response's data simultaneously to the database.
         var updates = {};
         updates['/responses/' + newPostKey] = opobj;
         firebase.database().ref().update(updates);
-        
+        readData();
 }
-    
-
+    var readData = function() {
+        firebase.database().ref('/responses/').once('value').then(function(snapshot) {
+            // ...
+            console.log(snapshot.val());
+        });
+    }
      
      

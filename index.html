@@ -57,8 +57,11 @@
     </div><!-- /.container -->
     
     
-    <!--create a timer -->
     <div class="container">
+        <div class="row" id="main">
+            <div class="col-md-4"></div>
+            <div class="col-md-8" id="finalScore"></div>
+        </div>
         <div class="row">
             <div class="col-md-4">
               <!--Question Number and progress info-->
@@ -91,6 +94,15 @@
                   <button type="button" class="btn btn-default" onclick="buttonClicked()">Submit</button>
               </form>  
             </div>
+        </div>
+        
+        <!-- Score Report -->
+        <div class="row" id="scoreReport">
+            <div class="col-md-4" id="totalScoreDiv">
+            </div>
+            <div class="col-md-8" id="bellChartDiv" style="min-height: 400px">
+            </div>
+            
         </div>
         
     </div>

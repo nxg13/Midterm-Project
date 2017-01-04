@@ -270,7 +270,7 @@ var buttonClicked = function() {
             // ...
             console.log(snapshot.val());
             //first calculate student score
-            var studentScore = correctCounter / questionArray.length;
+            var studentScore = correctCounter / questionCounter.length;
             var classAverage = 0;
             var classScore = 0;
             var keys = Object.keys(snapshot.val());

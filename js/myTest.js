@@ -280,7 +280,7 @@ var buttonClicked = function() {
                 var responseKeys = Object.keys(response);
                 var responseScore = 0;
                 for (var x = 0; x<responseKeys.length; x++) {
-                    var responseKey = responseKeys[x];
+                    var responseKey = responseKeys[i];
                     responseScore+=response[responseKey];
                 }
                 classScore+=responseScore;

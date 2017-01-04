@@ -285,7 +285,7 @@ var buttonClicked = function() {
                 }
                 classScore+=responseScore;
             }
-            classAverage = classScore / (keys.length * questionArray.length);
+            classAverage = classScore / (keys.length * correctArray.length);
             $("#main").hide();
             $("#scoreReport").show();
             $("#scoreReport").html("Your score: " + studentScore + "<br>Class Average: " + classAverage);

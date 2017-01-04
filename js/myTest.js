@@ -270,7 +270,7 @@ var buttonClicked = function() {
             // ...
             console.log(snapshot.val());
             //first calculate student score
-            var studentScore = correctCounter / questionArray.length;
+            var studentScore = 100*correctCounter / questionArray.length;
             var classAverage = 0;
             var classScore = 0;
             var keys = Object.keys(snapshot.val());
@@ -285,7 +285,7 @@ var buttonClicked = function() {
                 }
                 classScore+=responseScore;
             }
-            classAverage = classScore / (keys.length * questionArray.length);
+            classAverage = 100*classScore / (keys.length * questionArray.length);
             $("#main").hide();
             $("#scoreReport").show();
             $("#scoreReport").html("Your score: " + studentScore + "<br>Class Average: " + classAverage);

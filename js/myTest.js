@@ -285,10 +285,10 @@ var buttonClicked = function() {
                 }
                 classScore+=responseScore;
             }
-            classAverage = 100 * classScore / (keys.length * questionArray.length);
+            classAverage = Math.round(100 * classScore) / (keys.length * questionArray.length);
             $("#main").hide();
             $("#scoreReport").show();
-            $("#scoreReport").html("Your score: " + studentScore + "%" + "<br>Class Average: " + classAverage);
+            $("#scoreReport").html("Your score: " + studentScore + "%" + "<br>Class Average: " + classAverage + "%");
         });
     }
      

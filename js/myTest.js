@@ -337,7 +337,7 @@ var drawChart = function(withData) {
           vAxis: {minValue: 0}
         };
 
-        var chart = new google.visualization.ColumnChart(document.getElementById('bellChartDiv'));
+        var chart = new google.visualization.ColumnChart(document.getElementById('ColumnChartDiv'));
         chart.draw(data, options);
       }
     }

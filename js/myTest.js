@@ -295,7 +295,7 @@ var buttonClicked = function() {
                     var responseKey = responseKeys[x];
                     responseScore+=response[responseKey];
                 }
-                var responsePercent = 100*responseScore / questionArray1.length;
+                var responsePercent = 100*responseScore / questionArray.length;
                 if (responsePercent >= 90) {
                     outputArray[5][1] += 1;
                 } else if (responsePercent >= 80) {
@@ -339,8 +339,6 @@ var drawChart = function(withData) {
 
         var chart = new google.visualization.ColumnChart(document.getElementById('ColumnChartDiv'));
         chart.draw(data, options);
-      };
-     
-    
+      };    
     
     

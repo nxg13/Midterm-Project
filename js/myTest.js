@@ -339,7 +339,7 @@ var drawChart = function(withData) {
 
         var chart = new google.visualization.ColumnChart(document.getElementById('ColumnChartDiv'));
         chart.draw(data, options);
-      }
+      };
      
     
     

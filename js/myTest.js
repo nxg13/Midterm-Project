@@ -270,7 +270,8 @@ var buttonClicked = function() {
             // ...
             console.log(snapshot.val());
             //first calculate student score
-            var studentScore = Math.round(100 * correctCounter) / questionArray.length;
+            var studentScore = 100 * correctCounter / questionArray.length;
+            var s = studentScore.toFixed(2);
             var classAverage = 0;
             var classScore = 0;
             var keys = Object.keys(snapshot.val());
@@ -285,10 +286,11 @@ var buttonClicked = function() {
                 }
                 classScore+=responseScore;
             }
-            classAverage = Math.round(100 * classScore) / (keys.length * questionArray.length);
+            classAverage = 100 * classScore / (keys.length * questionArray.length);
+            var c = classAverage.toFixed(2);
             $("#main").hide();
             $("#scoreReport").show();
-            $("#scoreReport").html("Your score: " + studentScore + "%" + "<br>Class Average: " + classAverage + "%");
+            $("#scoreReport").html("Your score: " + s + "%" + "<br>Class Average: " + c + "%");
         });
     }
      

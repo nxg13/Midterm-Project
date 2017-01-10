@@ -1,6 +1,7 @@
 var database = firebase.database();
 
 $(".alert").hide();
+$("#scoreReport").hide();
 
 var questionArray = [
     "Which of the following is an example of checks and balances, as established by the Constitution?",

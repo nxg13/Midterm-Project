@@ -279,7 +279,7 @@ var buttonClicked = function() {
             var classScore = 0;
             var keys = Object.keys(snapshot.val());
             var outputArray = [
-                ['Grade', 'Number']
+                ['Grade', 'Number'],
                 ['F', 0],
                 ['D', 0],
                 ['C', 0],

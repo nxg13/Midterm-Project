@@ -312,6 +312,7 @@ var buttonClicked = function() {
             classAverage = 100 * classScore / (keys.length * questionArray.length);
             var c = classAverage.toFixed(2);
             $("#main").hide();
+            $("#testWhole").hide();
             $("#scoreReport").show();
             $("#totalScoreDiv").html("Your score: " + s + "%" + "<br>Class Average: " + c + "%");
             drawChart(outputArray);

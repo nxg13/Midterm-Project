@@ -322,14 +322,6 @@ var buttonClicked = function() {
     
 var drawChart = function(withData) {
         var data = google.visualization.arrayToDataTable(withData);
-    
-    var view = new google.visualization.DataView(data);
-      view.setColumns([0, 1,
-                       { calc: "stringify",
-                         sourceColumn: 1,
-                         type: "string",
-                         role: "annotation" },
-                       2]);
 
         var options = {
           title: 'Company Performance',

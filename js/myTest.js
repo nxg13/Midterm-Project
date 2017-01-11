@@ -325,9 +325,12 @@ var drawChart = function(withData) {
         var data = google.visualization.arrayToDataTable(withData);
 
         var options = {
-          title: 'Company Performance',
-          hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
-          vAxis: {minValue: 0}
+          title: 'Test Performance',
+            titleTextStyle: {
+                fontSize: 20
+            },
+          hAxis: {title: 'Letter Grade',  titleTextStyle: {color: '#333'}},
+          vAxis: {title: 'Number of Test-Takers' minValue: 0}
         };
 
         var chart = new google.visualization.ColumnChart(document.getElementById('ColumnChartDiv'));

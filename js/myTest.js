@@ -326,11 +326,12 @@ var drawChart = function(withData) {
 
         var options = {
           title: 'Test Performance',
-            titleTextStyle: {
+          titleTextStyle: {
                 fontSize: 20
             },
           hAxis: {title: 'Letter Grade',  titleTextStyle: {color: '#333'}},
-          vAxis: {title: 'Number of Test-Takers' minValue: 0}
+          vAxis: {title: 'Number of Test-Takers' minValue: 0},
+          animation: {"startup": true},
         };
 
         var chart = new google.visualization.ColumnChart(document.getElementById('ColumnChartDiv'));

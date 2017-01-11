@@ -313,7 +313,7 @@ var buttonClicked = function() {
             var c = classAverage.toFixed(2);
             $("#main").hide();
             $("#scoreReport").show();
-            $("#scoreReport").html("Your score: " + s + "%" + "<br>Class Average: " + c + "%");
+            $("#totalScoreDiv").html("Your score: " + s + "%" + "<br>Class Average: " + c + "%");
             drawChart(outputArray);
         });
     }

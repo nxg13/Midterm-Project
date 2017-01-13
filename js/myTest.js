@@ -330,7 +330,7 @@ var drawChart = function(withData) {
                 fontSize: 20
             },
           hAxis: {title: 'Letter Grade',  titleTextStyle: {color: '#333'}},
-          vAxis: {title: 'Number of Test-Takers' minValue: 0},
+          vAxis: {title: 'Number of Test-Takers', minValue: 0},
           animation: {"startup": true},
         };
 

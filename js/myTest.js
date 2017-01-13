@@ -335,7 +335,6 @@ var drawChart = function(withData) {
                       duration: 500,
                       easing: 'out',
                      },
-          animation.duration
         };
 
         var chart = new google.visualization.ColumnChart(document.getElementById('ColumnChartDiv'));

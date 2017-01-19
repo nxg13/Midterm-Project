@@ -314,7 +314,7 @@ var buttonClicked = function() {
             $("#main").hide();
             $("#testWhole").hide();
             $("#scoreReport").show();
-            $("#totalScoreDiv").html("Your score: " + s + "%" + "<br>Class Average: " + c + "%" + "<br>Questions You Got Wrong: " + );
+            $("#totalScoreDiv").html("Your score: " + s + "%" + "<br>Class Average: " + c + "%" + "<br>Questions You Got Wrong: " + outputObject);
             drawChart(outputArray);
         });
     }

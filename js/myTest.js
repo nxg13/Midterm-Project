@@ -216,7 +216,7 @@ var buttonClicked = function() {
     questionCounter++;
     
     //MAKE TEST EASIER TO TRY OUT BY MAKING >= # SMALLER (full test is questionArray.length) !!!!!!!!!!!  
-    if (questionCounter >= 3) {
+    if (questionCounter >= questionArray.length) {
         //end the test here
         //display the score report, send scores to data base, etc.
         collectData();
@@ -314,7 +314,7 @@ var buttonClicked = function() {
             $("#main").hide();
             $("#testWhole").hide();
             $("#scoreReport").show();
-            $("#totalScoreDiv").html("Your score: " + s + "%" + "<br>Class Average: " + c + "%" + "<br>How You did (1=correct answer; 0=incorrect answer) " + snapshot.val() );
+            $("#totalScoreDiv").html("Your score: " + s + "%" + "<br>Class Average: " + c + "%" + "<br>How You did (1=correct answer; 0=incorrect answer) " + snapshot.val()[key];
             drawChart(outputArray);
         });
     }
